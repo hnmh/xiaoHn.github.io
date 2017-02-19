@@ -406,7 +406,7 @@ $(function(){
 						{"id":"11","name":"其他学习","parentId":"10","url":"./page/other.html","icon":"","order":"1","isHeader":"0","childMenus":""}
 	
 					]},{"id":"12","name":"干货分享","parentId":"12","url":"./page/gh.html","icon":"","order":"1","isHeader":"0","childMenus":""}
-					,{"id":"13","name":"关注博客","parentId":"12","url":"./page/blog.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+					,{"id":"13","name":"关注平台","parentId":"12","url":"./page/blog.html","icon":"","order":"1","isHeader":"0","childMenus":""}
 				]}
 				];
 	initMenu(menu,$(".side-menu"));
