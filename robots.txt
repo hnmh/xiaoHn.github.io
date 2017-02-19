@@ -1,0 +1,6 @@
+# robots.txt 
+User-agent: *
+User-agent: Baiduspider
+User-agent: Googlespider
+User-agent: bingspider
+Allow: *
