@@ -406,7 +406,6 @@ $(function(){
 				]},
 				
 				{"id":"1","name":"在关注：","parentId":"0","icon":"&#xe602;","icon":"","order":"1","isHeader":"1","childMenus":[
-					
 					{"id":"4","name":"关注平台","parentId":"1","url":"./page/blog.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""}
 				]}
 				];
