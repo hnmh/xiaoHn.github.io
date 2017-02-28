@@ -387,26 +387,27 @@ function getMathColor(){
 }
 $(function(){
 	/*获取皮肤  getSkinByCookie();  菜单json*/
-	var menu = [{"id":"1","name":"走过的路：","parentId":"0","url":"home.html","icon":"","order":"1","isHeader":"1","childMenus":[
+	var menu = [{"id":"1","name":"曾走过：","parentId":"0","url":"home.html","icon":"","order":"1","isHeader":"1","childMenus":[
 					{"id":"2","name":"找到了兴趣","icon":"&#xe604;","url":"./page/xq.html","childMenus":""},
 					{"id":"3","name":"开始了征程","icon":"&#xe604;","url":"./page/zc.html","childMenus":""}
 				]},
 				
-				{"id":"1","name":"那一段桥：","parentId":"0","icon":"","order":"1","isHeader":"1","childMenus":[
+				{"id":"1","name":"在写作：","parentId":"0","icon":"","order":"1","isHeader":"1","childMenus":[
 					
 					{"id":"4","name":"过往","parentId":"1","url":"./page/gw.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""},
 					{"id":"5","name":"未来","parentId":"1","url":"./page/wl.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""}
 				]},
 	
-				{"id":"6","name":"看过的景：","parentId":"0","icon":"","order":"2","isHeader":"1","childMenus":[
-					{"id":"7","name":"主要学习","parentId":"2","icon":"","url":"./page/study.html","order":"1","isHeader":"0","childMenus":[
-						{"id":"8","name":"渗透测试","parentId":"10","url":"./page/st.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+				{"id":"6","name":"在路上：","parentId":"0","icon":"","order":"2","isHeader":"1","childMenus":[   
+						{"id":"8","name":"安全测试","parentId":"10","url":"./page/st.html","icon":"","order":"1","isHeader":"0","childMenus":""},
 						{"id":"9","name":"代码审计","parentId":"10","url":"./page/sj.html","icon":"","order":"1","isHeader":"0","childMenus":""},
-						{"id":"10","name":"安全运维","parentId":"10","url":"./page/yw.html","icon":"","order":"1","isHeader":"0","childMenus":""},
-						{"id":"11","name":"其他学习","parentId":"10","url":"./page/other.html","icon":"","order":"1","isHeader":"0","childMenus":""}
-	
-					]},{"id":"12","name":"干货分享","parentId":"12","url":"./page/gh.html","icon":"","order":"1","isHeader":"0","childMenus":""}
-					,{"id":"13","name":"关注平台","parentId":"12","url":"./page/blog.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+						{"id":"10","name":"Linux学习","parentId":"10","url":"./page/yw.html","icon":"","order":"1","isHeader":"0","childMenus":""},
+					    {"id":"12","name":"其他方面","parentId":"12","url":"./page/other.html","icon":"","order":"1","isHeader":"0","childMenus":""}
+				]},
+				
+				{"id":"1","name":"在关注：","parentId":"0","icon":"&#xe602;","icon":"","order":"1","isHeader":"1","childMenus":[
+					
+					{"id":"4","name":"关注平台","parentId":"1","url":"./page/blog.html","icon":"&#xe602;","order":"1","isHeader":"0","childMenus":""}
 				]}
 				];
 	initMenu(menu,$(".side-menu"));
