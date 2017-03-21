@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="description" content="XSS劫持form表单,获取用户明文记录">
+<title>XSS劫持form表单,获取用户明文记录</title>
+<style>
+			body{
+				width: 100%;
+				height: 100%;
+				background-color:#B2DFEE;
+			}
+			*{
+				margin: 0 auto;
+				padding: 0;
+			}
+
+		</style>
+</head>
+
+<body>
+
+<div>
+<center><br/>
+
+<font style="FONT-FAMILY: Comic Sans MS;">
+<strong><h2>XSS劫持form表单,获取用户明文记录</h2></strong>过客</font></center><br/>
+<div>
+<p>&nbsp;&nbsp;很多时候大家可能某一时刻特别想知道管理员的密码，就算拿到了网站的webshell，数据库的密码也是加密的，解开会超级麻烦，那么你就需要试试xss这个插件了。【form表单劫持(通用明文记录)】
+个人觉得把这个XSS 放入jquery当后门用真心不错。。。就算管理员清除了网站木马后门，这个不一定能发现并清除。确实如此啊，那么一段js一眼不是那么的容易发现。</p><br/>
+<center><p>&nbsp;&nbsp;首先说一下对应名称：</p><br/>
+<h4>
+<p>&nbsp;&nbsp;formname  对应html源码 form中的name</p><br/>
+<p>&nbsp;&nbsp;formid 对应html源码 form中的id</p><br/>
+<p>&nbsp;&nbsp;funcname 对应html源码中 ajax的加载项调用的代码。</p><br/>
+</h4>
+</center>
+<p>&nbsp;&nbsp;<center>文章实例如下：假设我要劫持下面的登陆窗口。</center></p><br/>
+<p>&nbsp;&nbsp;<center><img src="../../images/xss1.png"><br/>需要劫持的窗口<br/>然后我们鼠标右键，查看这段HTML代码。</center></p>
+<p>&nbsp;&nbsp;<center><img src="../../images/xss1-1.png"><br/>看到这段代码：<br/>form name="formlogin" class="formlogin" method="post" action="login.php?type=login"<br/><br/>这里注意到form 表单里面的 name的值 是formlogin 对吧。那么我们只需要回到XSS平台配置一下XSS平台模块。<br/><br/>如图：<br/><center><img src="../../images/xss1-2.png"></center></center></p><br/>
+<p>&nbsp;&nbsp;<center>然后点配置，保存一下。然后来到项目代码的地方，复制一下生成好的JS代码。</center><center><img src="../../images/xss1-3.png"></center></p>
+<p>&nbsp;&nbsp;<center>然后把这个JS代码放入刚刚要劫持的网站登陆界面的源码中，我们再右键查看源码。</center><center><img src="../../images/xss1-4.png"></center></p>
+<p>&nbsp;&nbsp;<center>然后只要对方在页面登陆，这边XSS平台就会收到信息。下面我们尝试登陆一下，当然，我不知道账号密码，只是随便测试一下,随便登陆测试一下</center><center><img src="../../images/xss1-5.png"></center></p>
+<p>&nbsp;&nbsp;<center>点完登陆后，我们来看看XSS平台收到的信息吧。下方就是XSS平台收到的图片。<center><img src="../../images/xss1-6.png" ></center></p><br/>
+<p>&nbsp;&nbsp;<center>以上就是针对普通表单劫持的方法及教程。有些表单稍微特殊，例如有些表单我拿我自己的XSS平台举例吧，我的平台登陆的地方用的是id + ajax的方式，如下图。<center><img src="../../images/xss1-7.png" height=""></center></center></p><br/>
+<p>&nbsp;&nbsp;<center>id好找，那么ajax代码如下图：<center><img src="../../images/xss1-8.png"></center></p>
+<p>&nbsp;&nbsp;<center>每个网页的登陆模块的代码都不一样，大家仔细找，别跟着我这么设置，我这个只是劫持演示所以填写的数据都是我需要劫持的页面。。。<br/><center>你需要找你想劫持哪个页面，就需要去你要劫持的页面找对应的代码。<center>那么我们平台就需要这么设置了。</center></p>
+<p>&nbsp;&nbsp;<center><img src="../../images/xss1-8.png"></center></p>
+<p>&nbsp;&nbsp;<center>最后保存，然后把代码放入页面就OK啦。</center></p><br/>
+<p>&nbsp;&nbsp;<center>【注意：此文章为博主GDD原创文章！转载需注意，请带原文链接(http://gdd.gd/1684.html)，至少也要是txt格式</p><br/>
+
+
+</div><br/><br/>
+
+</div>
+
+
+<center>
+<div><h4 >记：2016-9-9 22:19&nbsp;&nbsp;</a> </h4></div>
+</center></div><br/>
+<center><input type="button" name="button1" id="button1" value="返回上一页" onclick="history.go(-1)"> <br/><br/></center>
+<center><script type="text/javascript">document.write(['<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=',encodeURIComponent(location.href),'&title=',encodeURIComponent(document.title),'" target="_blank"  style="text-decoration:none;"  title="分享到QQ空间">分享到QQ空间<\/a>'].join(''));</script>
+</center>
+</div>
+<br/><br/>
+</body>
+</html>
